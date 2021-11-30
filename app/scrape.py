@@ -1,3 +1,3 @@
 """
-Scrapping linked in page for latest posts
+Scrapping linkedin page for latest posts
 """
