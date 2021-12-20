@@ -18,7 +18,7 @@ body, html {
 .main_content {
   background-color: white;
   /* margin-left: 55px; */
-  width: calc(100vw - 55px);
+  /* width: calc(100vw - 55px); */
 }
 
 /* .desktop > * {
@@ -32,15 +32,18 @@ body, html {
 
 }
 
-#svg1, #svg3 {
-  display: flex;
-  justify-content: left;
+@media (min-width: 770px) {
+  #svg1, #svg3 {
+    display: flex;
+    justify-content: left;
+  }
+  
+  #svg2, #svg4 {
+    display: flex;
+    justify-content: right;
+  }
 }
 
-#svg2, #svg4 {
-  display: flex;
-  justify-content: right;
-}
 
 
 
@@ -197,3 +200,91 @@ body, html {
     transform: scale(1.5);
   }
 }
+
+.small {
+  transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8); /* IE 9 */
+  -webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
+  -o-transform: scale(0.8, 0.8); /* Opera */
+  -moz-transform: scale(0.8, 0.8); /* Firefox */
+}
+
+#mainnav {
+  background: transparent;
+  color: rgb(105, 105, 105);
+  font-weight: bold;
+  
+  text-transform:uppercase;
+  letter-spacing: .05em;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+}
+
+.burger {
+  font-size: 1.5em;
+}
+
+
+#mainnav #menu {
+  display: none;
+  padding: 0.3em 1em;
+  cursor: pointer;
+}
+
+
+#mainnav ul {
+  display: block;
+  margin: 0;
+  text-align: center;
+}
+
+#mainnav ul li {
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+#mainnav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: .9em 1.5em .8em 1.5em;
+}
+
+#mainnav ul li a:hover {
+  box-shadow: 0 0 5px 1px #fff;
+}
+
+
+
+/* mboiel */
+@media all and (max-width: 767px) {
+	
+  #mainnav #menu {
+      display: block;
+  }
+
+  #mainnav ul {
+      display: none;
+      background: #666;
+      padding: 1em;
+      text-align: left;
+  }
+  #mainnav ul li {
+      display: block;
+  }
+
+  #mainnav ul li a {
+    display: flex;
+    align-items: center;
+  }
+  #mainnav ul li a span {
+    margin-left: .5em;
+  }
+
+}
+
